@@ -56,7 +56,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  toRemove = ""
+  var toRemove = ""
   for (let i = 0; i < getCart().length; i++){
     if(getCart()[i].itemName === item){
       toRemove = getCart()[i]
