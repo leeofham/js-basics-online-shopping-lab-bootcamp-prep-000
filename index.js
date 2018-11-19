@@ -48,11 +48,11 @@ return `${inCart}.`
 }
 
 function total() {
-  var total = 0;
+  var newTotal = 0;
   for (let i = 0; i < getCart().length; i++){
-    total += getCart().itemPrice[i];
+    newTotal += getCart().itemPrice[i];
   }
-  return total;
+  return newTotal;
 }
 
 function removeFromCart(item) {
