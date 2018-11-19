@@ -77,13 +77,13 @@ function toRemove(item){
 
 
 function placeOrder(cardNumber) {
-  if (arguments[0] == undefined){
+  if (cardNumber == undefined){
     return "Sorry, we don't have a credit card on file for you."
   }
   else{
     cart = []
     var totalCost = total()
-    return `Your total cost is $${totalCost}, whioch will be charged to the card ${cardnumber}.`
+    return `Your total cost is $${totalCost}, whioch will be charged to the card ${cardNumber}.`
   }
 
 }
