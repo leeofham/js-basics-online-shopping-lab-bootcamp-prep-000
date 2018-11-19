@@ -50,7 +50,7 @@ return `${inCart}.`
 function total() {
   var total = 0;
   for (let i = 0; i < getCart().length; i++){
-    var total += parseInt(getCart().itemPrice[i])
+    total += getCart().itemPrice[i];
   }
   return total;
 }
@@ -70,3 +70,4 @@ function removeFromCart(item) {
 function placeOrder(cardNumber) {
   // write your code here
 }
+2
