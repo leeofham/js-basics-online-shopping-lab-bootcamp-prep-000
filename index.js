@@ -49,8 +49,8 @@ return `${inCart}.`
 
 function total() {
   var total = 0;
-  for (let i = 0; i <getCart().length; i++){
-    total += parseInt(getCart().itemPrice[i])
+  for (let i = 0; i < getCart().length; i++){
+    total += getCart().itemPrice[i]
   }
   return total;
 }
