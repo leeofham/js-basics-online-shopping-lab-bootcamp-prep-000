@@ -50,7 +50,7 @@ return `${inCart}.`
 function total() {
   var totalCost = 0
   for (let i = 0; i < getCart().length; i++){
-    totalCost += getCart().itemPrice[i];
+    totalCost += getCart()[i].itemPrice;
   }
   return totalCost;
 }
