@@ -50,7 +50,7 @@ return `${inCart}.`
 function total() {
   var total = 0;
   for (let i = 0; i < getCart().length; i++){
-    newTotal = total + parseInt(getCart().itemPrice[i])
+    var newTotal = total + parseInt(getCart().itemPrice[i])
   }
   return newTotal;
 }
