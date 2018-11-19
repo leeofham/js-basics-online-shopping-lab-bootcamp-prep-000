@@ -57,8 +57,7 @@ function total() {
 
 function removeFromCart(item) {
   var removedItem = toRemove(item)
-
-  if (removedItem=== item){
+  if (removedItem === item){
     var toRemoveIndex = cart.indexOf(removedItem)
     getCart().splice(toRemoveIndex, 1)
   }
@@ -78,5 +77,13 @@ function toRemove(item){
 
 
 function placeOrder(cardNumber) {
-  // write your code here
+  if (cardNumber === undefined){
+    return "Sorry, we don't have a credit card on file for you."
+  }
+  else{
+    cart = []
+    var totalCost = total()
+    return `Your total cost is $${totalCost}, whioch will be charged to the card ${cardnumber}.`
+  }
+    
 }
