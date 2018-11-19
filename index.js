@@ -56,21 +56,24 @@ function total() {
 }
 
 function removeFromCart(item) {
+  removedItem = toRemove(item)
+  
+  if (removedItem=== item){
+    var toRemoveIndex = cart.indexOf(removedItem)
+    getCart().splice(toRemoveIndex, 1)
+  }
+  else{
+    return "That item is not in your cart."
+  }
+}
+function toRemove(item){
   var toRemove = ""
   for (let i = 0; i < getCart().length; i++){
     if(getCart()[i].itemName === item){
       toRemove = getCart()[i]
-    }
-    return toRemove
+      }
   }
-  if (toRemove === item){
-    var toRemoveIndex = cart.indexOf(toRemove)
-    getCart().splice(toRemoveIndex, 1)
-  }
-
-  else{
-    return "That item is not in your cart."
-  }
+  return toRemove;
 }
 
 
