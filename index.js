@@ -57,11 +57,11 @@ function total() {
 
 function removeFromCart(item) {
   for (let i = 0; i<getCart().length; i++){
-    if (getCart()[i].itemName != item){
-      return "That item is not in your cart."
+    if (getCart()[i].itemName == item){
+      return getCart().splice(i, 1)
     }
     else{
-      getCart().splice(i, 1)
+      return "That item is not in your cart."
     }
   }
 }
@@ -69,4 +69,4 @@ function removeFromCart(item) {
 function placeOrder(cardNumber) {
   // write your code here
 }
-2
+   
