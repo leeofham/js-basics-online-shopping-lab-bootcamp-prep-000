@@ -57,7 +57,7 @@ function total() {
 
 function removeFromCart(item) {
   var removedItem = toRemove(item)
-  if (removedItem === item){
+  if (item = removedItem){
     var toRemoveIndex = cart.indexOf(removedItem)
     getCart().splice(toRemoveIndex, 1)
   }
