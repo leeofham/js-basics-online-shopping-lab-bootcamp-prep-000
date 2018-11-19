@@ -56,16 +56,15 @@ function total() {
 }
 
 function removeFromCart(item) {
-  for (let i = 0; i<getCart().length; i++){
-    if (getCart()[i].itemName == item){
-      return getCart().splice(i, 1)
-    }
-    else{
-      return "That item is not in your cart."
+  for (let i = 0; i < getCart().length; i++){
+    if(getCart()[i].itemName === item){
+      getCart().splice(i, 1)
     }
   }
-}
+  if (getCart()[i].itemName != item){
+    return "That item is not in your cart."
 
+}
 function placeOrder(cardNumber) {
   // write your code here
 }
