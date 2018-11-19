@@ -77,7 +77,7 @@ function toRemove(item){
 
 
 function placeOrder(cardNumber) {
-  if (cardNumber == undefined){
+  if (arguments[0] == undefined){
     return "Sorry, we don't have a credit card on file for you."
   }
   else{
