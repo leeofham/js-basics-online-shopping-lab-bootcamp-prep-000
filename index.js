@@ -63,7 +63,7 @@ function removeFromCart(item) {
     return "That item is not in your cart."
   }
   else{
-    getCart().splice(item, 1)
+    remove.splice(i, 1)
   }
 }
 
