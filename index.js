@@ -56,14 +56,19 @@ function total() {
 }
 
 function removeFromCart(item) {
+  toRemove = ""
   for (let i = 0; i < getCart().length; i++){
     if(getCart()[i].itemName === item){
-      getCart().splice(i, 1)
+      toRemove = getCart()[i]
     }
   }
-  if (getCart()[i].itemName != item){
+  if (toRemove === item){
+  var toRemoveIndex = cart.indexOf(toRemove)
+  getCart().splice(toRemoveIndex, 1)
+}
+
+  else (getCart()[i].itemName != item){
     return "That item is not in your cart."
-  }
 }
 
 function placeOrder(cardNumber) {
